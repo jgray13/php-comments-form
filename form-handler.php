@@ -1,12 +1,22 @@
 <?php
-include('includes/header.html');
-$name = $_POST['name'];
-$email = $_POST['email'];
-$comments = $_POST['comments'];
+include 'includes/header.html';
+$name = '';
+$email = '';
+$comments = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	if (isset($_POST['name'])) {
+        $name = $_POST['name'];
+	}
+	if (isset($_POST['email'])) {
+        $email = $_POST['email'];
+	}
+	if (isset($_POST['comments'])) {
+        $comments = $_POST['comments'];
+	}
 
 echo "<p>Thanks for the comment $name...</p>";
-//echo substr($comments, 0, 70);
 echo "<p>We will reply to $email</p>";
+}
 
-include('includes/footer.html');
+include 'includes/footer.html';
 ?>

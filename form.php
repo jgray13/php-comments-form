@@ -1,5 +1,5 @@
 <?php
-include('includes/header.html');
+include 'includes/header.html';
 ?>
 		    <form action="form-handler.php" method="POST">
 			    <div id="form-inner">
@@ -13,5 +13,5 @@ include('includes/header.html');
 				</div>
 			</form>
 <?php
-include('includes/footer.html');
+include 'includes/footer.html';
 ?>
